@@ -1,0 +1,75 @@
+﻿@model SistemaWebMisRecetas.Models.Receta
+@{
+    ViewData["Title"] = "Detalle Receta";
+}
+
+<button class="btn btn-azul">
+    @Html.ActionLink("Nuevo", "Create","Receta")
+</button>
+
+
+<table class="table">
+    <tr>
+        <th> TITULO </th>
+        <th>@Html.DisplayNameFor(r=> r.Categoria)</th>
+        <th>@Html.DisplayNameFor(r=> r.Ingredientes)</th>
+        <th>@Html.DisplayNameFor(r=> r.Instrucciones)</th>
+        <th>@Html.DisplayNameFor(r=> r.NombreAutor)</th>
+        <th>@Html.DisplayNameFor(e=> e.ApellidoAutor)</th>
+        <th>@Html.DisplayNameFor(e=> e.EdadAutor)</th>
+        <th>@Html.DisplayNameFor(e=> e.CorreoAutor)</th>
+
+    </tr>
+
+    <tr>
+        <td>
+            @Html.DisplayFor(receta=> receta.Titulo)
+        </td>
+
+        <td>
+            @Html.DisplayFor(receta=> receta.Categoria)
+        </td>
+
+        <td>
+            @Html.DisplayFor(receta=> receta.Ingredientes)
+        </td>
+        <td>
+            @Html.DisplayFor(receta=> receta.Instrucciones)
+        </td>
+        <td>
+            @Html.DisplayFor(receta=> receta.NombreAutor)
+        </td>
+        <td>
+            @Html.DisplayFor(receta=> receta.ApellidoAutor)
+        </td>
+        <td>
+            @Html.DisplayFor(receta=> receta.EdadAutor)
+        </td>
+
+        <td>
+            @Html.DisplayFor(receta=> receta.CorreoAutor)
+        </td>
+
+
+    </tr>
+    
+</table>
+
+@section SideBar{
+
+    <h2>Acciones</h2>
+
+    <div class="receta-acciones">
+        
+        <button class="btn btn-amarillo">
+            @Html.ActionLink("Editar", "Edit", "Receta",new{id=Model.Id})
+        </button>
+        <button class="btn btn-rojo">
+            @Html.ActionLink("Eliminar", "Delete", "Receta",new{id=Model.Id})
+        </button>
+    </div>
+        
+    
+}
+
+

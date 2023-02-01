@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>_Layout</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;600;700&display=swap" rel="stylesheet">
+    <link href="~/css/main.css" rel="stylesheet" />
+</head>
+<body>
+
+    <header class="header">
+        <div class="title-web">
+            <h1>
+                Mis Recetas
+            </h1>
+        </div>
+        <nav class="nav">
+            @Html.ActionLink("Home","Index","Home")
+            @Html.ActionLink("Recetas","Index","Receta")
+        </nav>
+
+    </header>
+
+    <main class="main">
+
+        <seccion class="content">
+            @RenderBody()
+        </seccion>
+
+        <aside class="aside">
+            @if (IsSectionDefined("SideBar"))
+            {
+                @RenderSection("SideBar")
+            }
+            else
+            {
+                <h4>Zona Editable Opcional</h4>
+
+            }
+
+        </aside>
+        
+    </main>
+    <footer class="footer">
+        <p class="footer-text">misrecetas@SistemaWebMisRecetas.com</p>
+    </footer>
+
+
+</body>
+</html>

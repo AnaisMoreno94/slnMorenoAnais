@@ -1,0 +1,246 @@
+﻿
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+}
+
+.header {
+    display : grid;
+    grid-template-columns: 1fr 300px;
+    color: white;
+}
+.title-web {
+    background-color: coral;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.nav {
+    display:flex;
+    flex-direction: column;
+    align-items: initial;
+    justify-content: center;
+    background-color: #cf4d1d;
+    color: #fff;
+    font-weight: 600;
+}
+
+    .nav a {
+        text-decoration: none;
+        font-size: 20px;
+        margin: 0 10px;
+        padding: 5px;
+        width: 100px;
+    }
+
+        .nav a:hover {
+            background-color: #b84115;
+        }
+
+        .nav a:last-of-type {
+            margin-right: 30px;
+        }
+
+        .nav a:visited {
+            color: #fff;
+        }
+
+    .header h1 {
+        font-size: 40px;
+        padding: 10px;
+    }
+
+.main {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 300px;
+}
+
+
+.aside {
+    background-color: coral;
+}
+    .aside img {
+        max-width: 60%;
+        margin: 5px 0;
+    }
+        .aside img:last-of-type {
+        margin-bottom: 20px;
+        }
+    .aside h2 {
+        color: white;
+        margin: 10px 0;
+        text-align: center;
+    }
+
+
+
+.content{
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.home-info {
+max-width: 80%;
+margin: 40px auto;
+}
+
+.side-home {
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+
+}
+
+.receta-editar {
+    max-width: 80%;
+    margin: 0 auto;
+    color: white;
+    font-weight: 600;
+
+}
+
+
+.footer {
+    height: 80px;
+    width: 100%;
+    background-color: #cf4d1d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p {
+    color: #fff;
+    font-size: 24px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+    a:visited {
+        color: #000;
+    }
+
+
+
+.table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    border: 1px solid #000000;
+    margin-bottom: 20px;
+}
+
+    .table td, .table th {
+        border: 1px solid #000000;
+        padding: 5px;
+    }
+        .table td a {
+        color: #000;
+        text-decoration: underline;
+        }
+
+    .table thead {
+        background: #808080;
+    }
+
+.receta-acciones {
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 50%;
+
+}
+
+
+.btn {
+    border: none;
+    border-radius: 8px;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px;
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+    .btn a {
+        color: white;
+    }
+
+
+.btn-azul {
+    background-color: #599bb3;
+}
+
+.btn-rojo {
+    padding: 5px;
+    background-color: firebrick;
+}
+
+.btn-verde {
+    padding: 5px;
+    background-color: darkolivegreen;
+}
+
+.btn-amarillo {
+    padding: 5px;
+    background-color: darkgoldenrod;
+}
+
+.acciones {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+form {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+    form label {
+        display: inline-block;
+        width: 120px;
+        text-align: right;
+        margin-right: 5px;
+    }
+
+    form input {
+        width: 250px;
+        height: 30px
+    }
+
+        form input[type="submit"] {
+            background-color: seagreen;
+            border: none;
+            width: auto;
+            padding: 15px;
+            font-size: 14px;
+            border-radius: 8px;
+            height: auto;
+            color: #fff;
+            font-weight: 600;
+        }
+
+    form p {
+        margin: 2px;
+    }
+
+.propiedad {
+    margin-bottom: 5px;
+}
+
+    .propiedad:last-of-type {
+        margin-bottom: 20px;
+    }
+
+.prop-name {
+    display: inline-block;
+    width: 120px;
+    font-weight: 600;
+}

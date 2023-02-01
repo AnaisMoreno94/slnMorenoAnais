@@ -1,0 +1,68 @@
+﻿@model IEnumerable<SistemaWebMisRecetas.Models.Receta>
+@{
+    ViewData["Title"] = "Lista de Recetas";
+}
+
+<button class="btn btn-azul">
+    @Html.ActionLink("Nuevo", "Create","Receta")
+</button>
+
+
+<table class="table">
+    <tr>
+        <th> @Html.DisplayNameFor(r=> r.Titulo) </th>
+        <th>@Html.DisplayNameFor(r=> r.Categoria)</th>
+        <th>@Html.DisplayNameFor(r=> r.NombreAutor)</th>
+        <th>@Html.DisplayNameFor(e=> e.ApellidoAutor)</th>
+        <th>Acciones</th>
+    </tr>
+    @foreach (var receta in Model)
+    {
+        <tr>
+            <td>
+                @Html.ActionLink(receta.Titulo, "Detail", "Receta", new{id = receta.Id})
+            </td>
+
+            <td>
+                @Html.DisplayFor(m=> receta.Categoria)
+            </td>
+
+            <td>
+                @Html.ActionLink(receta.NombreAutor, "IndexByNombre", "Receta", new{nombre = receta.NombreAutor})
+            </td>
+            <td>
+                @Html.ActionLink(receta.ApellidoAutor, "IndexByApellido", "Receta", new{apellido = receta.ApellidoAutor})
+            </td>
+
+
+            <td class="acciones">
+
+
+                <button class="btn btn-rojo">
+                    @Html.ActionLink("Eliminar", "Delete", "Receta",new{id=receta.Id})
+                </button>
+
+
+            </td>
+
+        </tr>
+    }
+</table>
+
+@section SideBar{
+
+    @foreach (var receta in Model)
+    {
+        <div class="receta-editar">
+            <h2>Editar Recetas</h2>
+            @Html.DisplayFor(m=> receta.Titulo)
+            <button class="btn btn-amarillo">
+                @Html.ActionLink("Editar", "Edit", "Receta",new{id=receta.Id})
+            </button>
+        </div>
+        
+    }
+
+
+
+}

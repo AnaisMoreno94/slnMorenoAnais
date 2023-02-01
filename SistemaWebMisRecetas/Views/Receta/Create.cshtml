@@ -1,0 +1,71 @@
+﻿@model SistemaWebMisRecetas.Models.Receta
+@{
+    ViewData["Title"] = "Crear receta";
+}
+
+<h2>Registrar Nueva Receta</h2>
+
+@using (Html.BeginForm("Create", "Receta", FormMethod.Post))
+{
+    <p>
+        @Html.LabelFor(r=> r.Titulo)
+        @Html.TextBoxFor(r=>r.Titulo)
+        @Html.ValidationMessageFor(r=>r.Titulo)
+    </p>
+    <p>
+        @Html.LabelFor(r=> r.Categoria)
+        @Html.TextBoxFor(r=>r.Categoria)
+        @Html.ValidationMessageFor(r=>r.Categoria)
+    </p>
+    <p>
+        @Html.LabelFor(r=> r.Ingredientes)
+        @Html.TextBoxFor(r=>r.Ingredientes)
+        @Html.ValidationMessageFor(r=>r.Ingredientes)
+    </p>    
+    <p>
+        @Html.LabelFor(r=> r.Instrucciones)
+        @Html.TextBoxFor(r=>r.Instrucciones)
+        @Html.ValidationMessageFor(r=>r.Instrucciones)
+    </p>
+    <p>
+        @Html.LabelFor(r=> r.NombreAutor)
+        @Html.TextBoxFor(r=>r.NombreAutor)
+        @Html.ValidationMessageFor(r=>r.NombreAutor)
+    </p>
+    <p>
+        @Html.LabelFor(r=> r.ApellidoAutor)
+        @Html.TextBoxFor(r=>r.ApellidoAutor)
+        @Html.ValidationMessageFor(r=>r.ApellidoAutor)
+    </p>    
+    <p>
+        @Html.LabelFor(r=> r.EdadAutor)
+        @Html.TextBoxFor(r=>r.EdadAutor)
+        @Html.ValidationMessageFor(r=>r.EdadAutor)
+    </p>
+        <p>
+        @Html.LabelFor(r=> r.CorreoAutor)
+        @Html.TextBoxFor(r=>r.CorreoAutor)
+        @Html.ValidationMessageFor(r=>r.CorreoAutor)
+    </p>
+
+
+    <input type="submit" action="Create" value="Crear" />
+
+
+
+}
+
+
+@section SideBar{
+
+    <h2>Acciones</h2>
+
+    <div class="receta-acciones">
+
+        <button class="btn btn-azul il">
+            @Html.ActionLink("Volver","Index", "Receta")
+        </button>
+    </div>
+
+
+}
