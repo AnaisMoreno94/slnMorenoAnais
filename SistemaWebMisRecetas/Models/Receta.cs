@@ -21,11 +21,13 @@ namespace SistemaWebMisRecetas.Models
         [Required(ErrorMessage = "Campo Obligatorio")]
         [Column(TypeName = "varchar(250)")]
         [StringLength(250)]
+        [DataType(DataType.MultilineText)]
         public string Ingredientes { get; set; }
 
         [Required(ErrorMessage = "Campo Obligatorio")]
         [Column(TypeName = "varchar(250)")]
         [StringLength(250)]
+        [DataType(DataType.MultilineText)]
         public string Instrucciones { get; set; }
 
         [Required(ErrorMessage = "Campo Obligatorio")]
